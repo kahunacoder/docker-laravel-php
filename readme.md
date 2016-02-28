@@ -1,6 +1,6 @@
 # Php 7 FPM Container for Laravel 
 
-Installs these extensions and there dependencies.
+Installs these extensions and their dependencies.
 
  * json
  * mbstring
