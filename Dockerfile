@@ -1,5 +1,7 @@
-#FROM php:latest
 FROM php:7.0-fpm
+
+MAINTAINER "Gary Smith" <docker@kc.gs>
+
 RUN apt-get update && apt-get install -y \
         libjpeg62-turbo-dev \
         libmcrypt-dev \
@@ -49,6 +51,9 @@ RUN apt-get update && apt-get install -y \
 	&& docker-php-ext-install ctype \
 	&& docker-php-ext-install exif \
 	&& docker-php-ext-install pcntl \
-	&& docker-php-ext-install pdo_sqlite
+	&& docker-php-ext-install pdo_sqlite \
 
+	&& usermod -u 1000 www-data \
+	&& chown -Rf www-data.www-data /app/storage \
+	&& chmod -R 775 /app/storage
 

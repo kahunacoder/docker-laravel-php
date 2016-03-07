@@ -25,3 +25,20 @@ Installs these extensions and their dependencies.
  * exif
  * pcntl
  * pdo_sqlite
+
+## Docker Compose Config
+
+docker-compose.yml
+
+```
+...
+php:
+    image: kahunacoder/docker-laravel-php
+    expose:
+        - 9000
+    links:
+        - mysql
+    volumes_from:
+        - app
+...
+```
