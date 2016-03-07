@@ -53,7 +53,7 @@ RUN apt-get update && apt-get install -y \
 	&& docker-php-ext-install pcntl \
 	&& docker-php-ext-install pdo_sqlite \
 
-	&& usermod -u 1000 www-data \
+	#&& usermod -u 1000 www-data \
 	&& chown -Rf www-data.www-data /app/storage \
 	&& chmod -R 775 /app/storage
 
