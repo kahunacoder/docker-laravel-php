@@ -44,6 +44,7 @@ RUN apt-get update && apt-get install -y \
 	&& docker-php-ext-install posix \
 	&& docker-php-ext-install simplexml \
 	&& docker-php-ext-install soap \
+	&& docker-php-ext-install sockets \
 	&& docker-php-ext-install tidy \
 	&& docker-php-ext-install zip \
 	&& docker-php-ext-install bcmath \
